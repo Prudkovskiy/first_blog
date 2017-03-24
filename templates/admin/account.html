@@ -1,0 +1,26 @@
+{% block branding %}
+<h1 id="site-name"><a >Hello, {{user}}!</a></h1>
+<nav class="top-bar" data-topbar role="navigation">
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a>Write a post</a></li>
+        </ul>
+    </section>
+</nav>
+{% endblock %}
+
+<div>
+    <h1><a href="/">Your POSTS</a></h1>
+</div>
+
+    {% for post in posts %}
+<div>
+    <p>published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+</div>
+    {% endfor %}
+
+{% block nav-global %}{% endblock %}
