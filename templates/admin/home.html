@@ -1,18 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
 
-{% block branding %}
-<h1 id="site-name"><a href="{% url 'admin:index' %}">Hello!</a></h1>
-
-<nav class="top-bar" data-topbar role="navigation">
-    <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a>Sign up</a></li>
-        </ul>
-
-    </section>
-</nav>
-
-{% endblock %}
-
-{% block nav-global %}{% endblock %}
+<body class="container" style="min-width: 970px;">
+    <nav class="navbar navbar-default" style="min-width: 1140px;">
+        <div class="col-md-3">
+            <a class="navbar-brand" href="#"> 
+            </a>
+        </div>
+        <div class="col-md-7">
+            <h1><p>Blog for travelers</p></h1>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'signup' %}"><button type="button" text-align="before" class="btn btn-default navbar-btn">Sign up</button>
+            <a href="{% url 'login' %}"><button type="button" class="btn btn-default navbar-btn">Login</button></a>
+        </div>
+        </div>
+    </nav>
+</body>
+</html>
